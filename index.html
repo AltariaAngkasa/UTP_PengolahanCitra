@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplikasi Pengolahan Citra</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://docs.opencv.org/4.5.5/opencv.js"></script>
+</head>
+<body>
+  <h1>Pengolahan Citra Digital</h1>
+  <p>Fitur: Grayscale | Brightness | Histogram Equalization</p>
+
+  <input type="file" id="imageInput" accept="image/*"><br><br>
+  <canvas id="canvasOriginal"></canvas>
+  <canvas id="canvasOutput"></canvas><br><br>
+
+  <label for="brightness">Brightness:</label>
+  <input type="range" id="brightness" min="-100" max="100" value="0">
+
+  <br><br>
+  <button onclick="convertToGrayscale()">Grayscale</button>
+  <button onclick="applyBrightness()">Adjust Brightness</button>
+  <button onclick="equalizeHistogram()">Equalize Histogram</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
